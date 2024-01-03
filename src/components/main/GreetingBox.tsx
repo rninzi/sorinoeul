@@ -11,8 +11,8 @@ export const GreetingBox = () => {
         <Greetings>{GREETINGS}</Greetings>
         <BottomContainer>
           <div>
-            <Name>{PASTOR}</Name>
-            <Name>{POSITION}</Name>
+            <Greetings>{PASTOR}</Greetings>
+            <Greetings>{POSITION}</Greetings>
           </div>
           <SignSvg />
         </BottomContainer>
@@ -22,7 +22,7 @@ export const GreetingBox = () => {
 };
 
 const Container = styled.div`
-  width: 366px;
+  max-width: 366px;
   height: 366px;
   background: #fff;
   border-radius: 30px;
@@ -42,26 +42,21 @@ const ImageBox = styled.img`
 const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  margin: 0 20px;
 `;
 
-const GreetingsStyle = styled.p`
+const Greetings = styled.p`
   color: #000;
   font-size: 14px;
   font-weight: 400;
-`;
-
-const Greetings = styled(GreetingsStyle)`
-  margin: 0 20px;
+  line-height: 17px;
   white-space: pre-line;
   word-break: keep-all;
-`;
-
-const Name = styled(GreetingsStyle)`
-  margin: 0 0 0 20px;
 `;
 
 const BottomContainer = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 `;
