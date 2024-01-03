@@ -14,6 +14,7 @@ export const Header = () => {
 const Container = styled.div`
   display: flex;
   width: 100%;
+  max-width: 450px;
   padding: 0 22px;
   box-sizing: border-box;
   height: 72px;
