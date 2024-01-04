@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { GreetingBox } from '../components/main/GreetingBox';
+import { IntroductionBox } from '../components/main/IntroductionBox';
 
 export const MainPage = () => {
   return (
     <Container>
       <GreetingBox />
+      <IntroductionBox />
     </Container>
   );
 };
@@ -12,7 +14,7 @@ export const MainPage = () => {
 const Container = styled.div`
   max-width: 450px;
   width: 100%;
-  height: calc(100vh - 72px);
+  height: 100%;
   padding-top: 40px;
   box-sizing: border-box;
   background: #f4f4f5;
