@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import pastor from '../../assets/images/pastor.png';
-import { GREETINGS, PASTOR, POSITION } from '../../assets/data/greetings';
+import { GREETINGS, PASTOR } from '../../assets/data/constants';
 import { ReactComponent as SignSvg } from '../../assets/images/sign.svg';
 
 export const GreetingBox = () => {
@@ -11,8 +11,8 @@ export const GreetingBox = () => {
         <Greetings>{GREETINGS}</Greetings>
         <BottomContainer>
           <div>
-            <Greetings>{PASTOR}</Greetings>
-            <Greetings>{POSITION}</Greetings>
+            <Greetings>{PASTOR.name}</Greetings>
+            <Greetings>{PASTOR.position}</Greetings>
           </div>
           <SignSvg />
         </BottomContainer>
