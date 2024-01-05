@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 import { GreetingBox } from '../components/main/GreetingBox';
 import { IntroductionBox } from '../components/main/IntroductionBox';
+import { TrackListBox } from '../components/main/TrackListBox';
+import { AlbumCredit } from '../components/main/AlbumCredit';
 
 export const MainPage = () => {
   return (
     <Container>
       <GreetingBox />
       <IntroductionBox />
+      <TrackListBox />
+      <AlbumCredit />
     </Container>
   );
 };
