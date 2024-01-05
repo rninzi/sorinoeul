@@ -88,7 +88,7 @@ const Body1 = styled.h3`
 const Body2 = styled.p`
   color: #000;
   font-size: 10px;
-  line-height: 17px;
+  line-height: 12px;
 `;
 
 const TrackInfoContainer = styled.div`
