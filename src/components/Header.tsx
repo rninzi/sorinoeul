@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 import { ReactComponent as LogoSvg } from '../assets/images/logo.svg';
-import { ReactComponent as MenuSvg } from '../assets/icons/menu-icon.svg';
 
 export const Header = () => {
   return (
     <Container>
       <Logo />
-      <Menu />
     </Container>
   );
 };
@@ -26,9 +24,5 @@ const Container = styled.div`
 `;
 
 const Logo = styled(LogoSvg)`
-  cursor: pointer;
-`;
-
-const Menu = styled(MenuSvg)`
   cursor: pointer;
 `;
