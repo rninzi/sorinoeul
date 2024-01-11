@@ -2,20 +2,22 @@ import styled from 'styled-components';
 import { ReactComponent as TrackDownSvg } from '../../assets/icons/mp3-download-icon.svg';
 import { ReactComponent as ScoreDownSvg } from '../../assets/icons/score-download-icon.svg';
 
-export type Track = {
-  track: {
-    id: number;
-    title: string;
-    vocal?: string;
-    songWriter?: string;
-    originalSong?: string;
-    arrangers?: string[];
-    soundTrackLink: string;
-    scoreLink?: string;
-  };
+type Track = {
+  id: number;
+  title: string;
+  vocal?: string | null;
+  songWriter?: string | null;
+  originalSong?: string | null;
+  arrangers?: string[] | null;
+  soundTrackLink: string;
+  scoreLink?: string | null;
 };
 
-export const TrackListItem = ({ track }: Track) => {
+export type TrackListItemProps = {
+  track: Track;
+};
+
+export const TrackListItem = ({ track }: TrackListItemProps) => {
   return (
     <OuterContainer>
       <InnerContainer>
