@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { TitleBox } from '../TitleBox';
-import { TITLE } from '../../assets/data/constants';
+import { STREAMING_URL, TITLE } from '../../assets/data/constants';
 import melonLogo from '../../assets/images/logo-melon.png';
 import genieLogo from '../../assets/images/logo-genie.png';
 import youtubeMusicLogo from '../../assets/images/logo-youtube-music.png';
@@ -11,10 +11,22 @@ export const StreamingSitesBox = () => {
     <Container>
       <TitleBox>{TITLE.streaming}</TitleBox>
       <InnerContainer>
-        <LeftLogo src={melonLogo} />
-        <GenieLogo src={genieLogo} />
-        <LeftLogo src={youtubeMusicLogo} />
-        <RightLogo src={bugsLogo} />
+        <a href={STREAMING_URL.melon} target="_blank" rel="noopener noreferrer">
+          <LeftLogo src={melonLogo} />
+        </a>
+        <a href={STREAMING_URL.genie} target="_blank" rel="noopener noreferrer">
+          <GenieLogo src={genieLogo} />
+        </a>
+        <a
+          href={STREAMING_URL.youtubeMusic}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LeftLogo src={youtubeMusicLogo} />
+        </a>
+        <a href={STREAMING_URL.bugs} target="_blank" rel="noopener noreferrer">
+          <RightLogo src={bugsLogo} />
+        </a>
       </InnerContainer>
     </Container>
   );
