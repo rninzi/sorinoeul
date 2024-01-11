@@ -41,16 +41,24 @@ export const TrackListItem = ({ track }: Track) => {
             )}
           </TrackInfoContainer>
         </ItemLeftBox>
-        <DownloadIcon>
-          <TrackDownSvg />
-          <Body2>MP3</Body2>
-        </DownloadIcon>
+        <a
+          href={track.soundTrackLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <DownloadIcon>
+            <TrackDownSvg />
+            <Body2>MP3</Body2>
+          </DownloadIcon>
+        </a>
       </InnerContainer>
       {track.scoreLink && (
-        <DownloadIcon>
-          <ScoreDownSvg />
-          <Body2>악보</Body2>
-        </DownloadIcon>
+        <a href={track.scoreLink} target="_blank" rel="noopener noreferrer">
+          <DownloadIcon>
+            <ScoreDownSvg />
+            <Body2>악보</Body2>
+          </DownloadIcon>
+        </a>
       )}
     </OuterContainer>
   );
