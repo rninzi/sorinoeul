@@ -143,3 +143,11 @@ export const SERVICE_INFO = [
       '예배 때 드려지는 찬양의 율동과 헌금송으로 드려지는 워십댄스를 연습하고 예배를 준비합니다. 노래와 악기 연주, 춤으로 찬양하며 예배에 헌신하고 봉사할 친구들의 많은 지원을 바랍니다.',
   },
 ];
+
+export const STREAMING_URL = {
+  melon: 'https://www.melon.com/album/detail.htm?albumId=11388394',
+  genie: 'https://www.genie.co.kr/detail/albumInfo?axnm=84630791',
+  youtubeMusic:
+    'https://music.youtube.com/playlist?list=OLAK5uy_nFwXHaWkX4D3fwDmKYIKOvaZcwjUWaQBA',
+  bugs: 'https://music.bugs.co.kr/album/20613573?wl_ref=list_ab_03',
+};
