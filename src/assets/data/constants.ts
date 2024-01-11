@@ -1,3 +1,6 @@
+import highSchoolJunior from '../../assets/images/highschool-junior.png';
+import highSchoolSenior from '../../assets/images/highschool-senior.png';
+
 export const GREETINGS =
   '할렐루야!\n소리노을의 찬양을 통해 많은 사람들이 위로받고 주님께 돌아오는 일들이 있기를 예수님의 이름으로 축복합니다. 교회학교 소리노을 찬양팀을 사랑하고 축복합니다.';
 
@@ -15,7 +18,7 @@ export const TITLE = {
   albumCredit: 'ALBUM CREDIT',
   apply: '소리노을 지원하기',
   streaming: '스트리밍 사이트 바로가기',
-  serviceInfo: '고등부 예배 안내',
+  worshipInfo: '고등부 예배 안내',
 };
 
 export const ALBUM_CREDIT = [
@@ -151,3 +154,29 @@ export const STREAMING_URL = {
     'https://music.youtube.com/playlist?list=OLAK5uy_nFwXHaWkX4D3fwDmKYIKOvaZcwjUWaQBA',
   bugs: 'https://music.bugs.co.kr/album/20613573?wl_ref=list_ab_03',
 };
+
+export const WORSHIP_INFO_LIST = {
+  target: '대상 : ',
+  place: '예배장소 : ',
+  time: '예배시간 : ',
+  youtube: 'YOUTUBE : ',
+};
+
+export const WORSHIP_INFO = [
+  {
+    imgSrc: highSchoolJunior,
+    target: '고등학교 1,2학년',
+    place: '제2교육관 6층 야고보 성전',
+    time: '1부 8시 30분, 2부 10시 30분',
+    youtubeID: '@highyfgc',
+    youtubeURL: 'https://www.youtube.com/@highyfgc',
+  },
+  {
+    imgSrc: highSchoolSenior,
+    target: '고등학교 3학년',
+    place: '비전센터 6층 브니엘 성전',
+    time: '오전 8시 30분',
+    youtubeID: '@user-ys5br4dg8n',
+    youtubeURL: 'https://www.youtube.com/@user-ys5br4dg8n',
+  },
+];
