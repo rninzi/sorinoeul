@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as AlbumLogoSvg } from '../../assets/images/album-logo.svg';
-import { ALBUM_INTRODUCTION } from '../../assets/data/constants';
+import { ReactComponent as AlbumLogoSvg } from 'assets/images/album-logo.svg';
+import { ALBUM_INTRODUCTION } from 'assets/data/constants';
 
 export const IntroductionBox = () => {
   return (

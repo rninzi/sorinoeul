@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { WORSHIP_INFO_LIST } from '../../assets/data/constants';
+import { WORSHIP_INFO_LIST } from 'assets/data/constants';
 
 type WorshipInfoBoxProps = {
   imageSrc: string;

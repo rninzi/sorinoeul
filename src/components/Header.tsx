@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as LogoSvg } from '../assets/images/logo.svg';
+import { ReactComponent as LogoSvg } from 'assets/images/logo.svg';
 
 export const Header = () => {
   return (

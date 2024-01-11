@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { TitleBox } from '../TitleBox';
-import { ALBUM_CREDIT, TITLE } from '../../assets/data/constants';
+import { TitleBox } from 'components/TitleBox';
+import { ALBUM_CREDIT, TITLE } from 'assets/data/constants';
 
 export const AlbumCredit = () => {
   return (

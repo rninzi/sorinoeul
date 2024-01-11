@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { TitleBox } from '../TitleBox';
-import teamImg from '../../assets/images/team-image.png';
+import { TitleBox } from 'components/TitleBox';
+import teamImg from 'assets/images/team-image.png';
 import { InformationBox } from './InformationBox';
-import { APPLY, SERVICE_INFO, TITLE } from '../../assets/data/constants';
-import { ReactComponent as DownloadSvg } from '../../assets/icons/application-download-icon.svg';
+import { APPLY, SERVICE_INFO, TITLE } from 'assets/data/constants';
+import { ReactComponent as DownloadSvg } from 'assets/icons/application-download-icon.svg';
 
 export const ApplyBox = () => {
   return (

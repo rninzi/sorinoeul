@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { TitleBox } from '../TitleBox';
-import { STREAMING_URL, TITLE } from '../../assets/data/constants';
-import melonLogo from '../../assets/images/logo-melon.png';
-import genieLogo from '../../assets/images/logo-genie.png';
-import youtubeMusicLogo from '../../assets/images/logo-youtube-music.png';
-import bugsLogo from '../../assets/images/logo-bugs.png';
+import { TitleBox } from 'components/TitleBox';
+import { STREAMING_URL, TITLE } from 'assets/data/constants';
+import melonLogo from 'assets/images/logo-melon.png';
+import genieLogo from 'assets/images/logo-genie.png';
+import youtubeMusicLogo from 'assets/images/logo-youtube-music.png';
+import bugsLogo from 'assets/images/logo-bugs.png';
 
 export const StreamingSitesBox = () => {
   return (

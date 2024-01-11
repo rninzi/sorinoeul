@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { TitleBox } from '../TitleBox';
-import { TITLE, WORSHIP_INFO } from '../../assets/data/constants';
+import { TitleBox } from 'components/TitleBox';
+import { TITLE, WORSHIP_INFO } from 'assets/data/constants';
 import { WorshipInfoBox } from './WorshipInfoBox';
 
 export const HighSchoolWorshipBox = () => {

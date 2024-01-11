@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import pastor from '../../assets/images/pastor.png';
-import { GREETINGS, PASTOR } from '../../assets/data/constants';
-import { ReactComponent as SignSvg } from '../../assets/images/sign.svg';
+import pastor from 'assets/images/pastor.png';
+import { GREETINGS, PASTOR } from 'assets/data/constants';
+import { ReactComponent as SignSvg } from 'assets/images/sign.svg';
 
 export const GreetingBox = () => {
   return (

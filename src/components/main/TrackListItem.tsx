@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as TrackDownSvg } from '../../assets/icons/mp3-download-icon.svg';
-import { ReactComponent as ScoreDownSvg } from '../../assets/icons/score-download-icon.svg';
+import { ReactComponent as TrackDownSvg } from 'assets/icons/mp3-download-icon.svg';
+import { ReactComponent as ScoreDownSvg } from 'assets/icons/score-download-icon.svg';
 
 type Track = {
   id: number;

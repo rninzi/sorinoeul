@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import albumArt from '../../assets/images/album-art.png';
+import albumArt from 'assets/images/album-art.png';
 import { TrackListItem } from './TrackListItem';
-import { mockupData } from '../../assets/data/mockupData';
+import { mockupData } from 'assets/data/mockupData';
 
 export const TrackListBox = () => {
   return (

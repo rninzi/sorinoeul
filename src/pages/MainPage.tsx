@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { GreetingBox } from '../components/main/GreetingBox';
-import { IntroductionBox } from '../components/main/IntroductionBox';
-import { TrackListBox } from '../components/main/TrackListBox';
-import { AlbumCredit } from '../components/main/AlbumCredit';
-import { ApplyBox } from '../components/main/ApplyBox';
-import { StreamingSitesBox } from '../components/main/StreamingSitesBox';
-import { HighSchoolWorshipBox } from '../components/main/HighSchoolWorshipBox';
+import { GreetingBox } from 'components/main/GreetingBox';
+import { IntroductionBox } from 'components/main/IntroductionBox';
+import { TrackListBox } from 'components/main/TrackListBox';
+import { AlbumCredit } from 'components/main/AlbumCredit';
+import { ApplyBox } from 'components/main/ApplyBox';
+import { StreamingSitesBox } from 'components/main/StreamingSitesBox';
+import { HighSchoolWorshipBox } from 'components/main/HighSchoolWorshipBox';
 
 export const MainPage = () => {
   return (
