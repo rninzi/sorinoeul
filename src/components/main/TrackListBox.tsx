@@ -30,7 +30,7 @@ const AlbumArtContainer = styled.div`
   height: 300px;
   background: #fff;
   border-radius: 30px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
   margin-bottom: 49px;
 `;
 
