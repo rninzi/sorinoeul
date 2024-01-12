@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { ReactComponent as TrackDownSvg } from 'assets/icons/mp3-download-icon.svg';
 import { ReactComponent as ScoreDownSvg } from 'assets/icons/score-download-icon.svg';
+import { downloadFile } from 'utils/downloadFile';
 
 type Track = {
   id: number;
@@ -9,8 +10,8 @@ type Track = {
   songWriter?: string | null;
   originalSong?: string | null;
   arrangers?: string[] | null;
-  soundTrackLink: string;
-  scoreLink?: string | null;
+  soundTrackURL: string;
+  scoreURL?: string | null;
 };
 
 export type TrackListItemProps = {
@@ -43,24 +44,28 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
             )}
           </TrackInfoContainer>
         </ItemLeftBox>
-        <a
-          href={track.soundTrackLink}
-          target="_blank"
-          rel="noopener noreferrer"
+        <DownloadButton
+          onClick={() =>
+            downloadFile(
+              track.soundTrackURL,
+              track.id + '.' + track.title + '.mp3'
+            )
+          }
         >
-          <DownloadIcon>
-            <TrackDownSvg />
-            <IconTitle>MP3</IconTitle>
-          </DownloadIcon>
-        </a>
+          <TrackDownSvg />
+          <IconTitle>MP3</IconTitle>
+        </DownloadButton>
       </InnerContainer>
-      {track.scoreLink && (
-        <a href={track.scoreLink} target="_blank" rel="noopener noreferrer">
-          <DownloadIcon>
-            <ScoreDownSvg />
-            <IconTitle>악보</IconTitle>
-          </DownloadIcon>
-        </a>
+      {track.scoreURL && (
+        <DownloadButton
+          onClick={() =>
+            track.scoreURL &&
+            downloadFile(track.scoreURL, track.id + '.' + track.title + '.pdf')
+          }
+        >
+          <ScoreDownSvg />
+          <IconTitle>악보</IconTitle>
+        </DownloadButton>
       )}
     </OuterContainer>
   );
@@ -111,7 +116,7 @@ const TrackInfoInnerContainer = styled.div`
   gap: 5px;
 `;
 
-const DownloadIcon = styled.div`
+const DownloadButton = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
