@@ -4,6 +4,7 @@ import teamImg from 'assets/images/team-image.png';
 import { InformationBox } from './InformationBox';
 import { APPLY, SERVICE_INFO, TITLE } from 'assets/data/constants';
 import { ReactComponent as DownloadSvg } from 'assets/icons/application-download-icon.svg';
+import { downloadFile } from 'utils/downloadFile';
 
 export const ApplyBox = () => {
   return (
@@ -20,9 +21,7 @@ export const ApplyBox = () => {
             {APPLY.inquiry} : {APPLY.email}
           </Notification>
           <DownloadBox
-            href={APPLY.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => downloadFile(APPLY.fileUrl, APPLY.fileName)}
           >
             <DownloadSvg />
             <DownloadURL>{APPLY.download}</DownloadURL>
@@ -64,12 +63,11 @@ const DownloadURL = styled(Notification)`
   font-weight: 600;
 `;
 
-const DownloadBox = styled.a`
+const DownloadBox = styled.button`
   display: flex;
   border: 1px dashed gray;
   border-radius: 2px;
   gap: 3px;
   padding: 1px 6px;
   align-items: center;
-  cursor: pointer;
 `;
