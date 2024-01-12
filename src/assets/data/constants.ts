@@ -118,7 +118,9 @@ export const APPLY = {
   inquiry: '🤗 문의',
   email: 'sorinoeul@gmail.com',
   download: '소리노을 원서 다운로드',
-  url: 'https://drive.google.com/file/d/1A87zuH6gP2gN9qV1AKYbPOAqlU4GpqaA/view?usp=sharing',
+  fileName: '소리노을 응시원서',
+  fileUrl:
+    'https://firebasestorage.googleapis.com/v0/b/sorinoeul-yfgc.appspot.com/o/application%2F%E1%84%89%E1%85%A9%E1%84%85%E1%85%B5%E1%84%82%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%B3%E1%86%BC%E1%84%89%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%89%E1%85%A5.pdf?alt=media&token=3ceda266-1115-4b14-bc17-68b057cf6310',
 };
 
 export const SERVICE_INFO = [
