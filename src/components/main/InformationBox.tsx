@@ -2,24 +2,24 @@ import styled from 'styled-components';
 
 type InformationBoxProps = {
   title: string;
-  detail: string;
+  description: string;
 };
 
-export const InformationBox = ({ title, detail }: InformationBoxProps) => {
+export const InformationBox = ({ title, description }: InformationBoxProps) => {
   return (
     <div>
-      <Body>{title}</Body>
-      <Body2>- {detail}</Body2>
+      <Title>{title}</Title>
+      <Description>- {description}</Description>
     </div>
   );
 };
 
-const Body = styled.p`
+const Title = styled.p`
   color: #000;
   font-size: 14px;
   line-height: 17px;
 `;
 
-const Body2 = styled(Body)`
+const Description = styled(Title)`
   margin-left: 10px;
 `;

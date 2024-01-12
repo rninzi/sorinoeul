@@ -11,21 +11,21 @@ export const ApplyBox = () => {
       <TitleBox>{TITLE.apply}</TitleBox>
       <img src={teamImg} alt="소리노을 이미지" />
       <InnerContainer>
-        <Body1>{APPLY.notify}</Body1>
+        <Notification>{APPLY.notify}</Notification>
         {SERVICE_INFO.map((item) => (
-          <InformationBox title={item.title} detail={item.detail} />
+          <InformationBox title={item.title} description={item.description} />
         ))}
         <BottomBox>
-          <Body1>
+          <Notification>
             {APPLY.inquiry} : {APPLY.email}
-          </Body1>
+          </Notification>
           <DownloadBox
             href={APPLY.url}
             target="_blank"
             rel="noopener noreferrer"
           >
             <DownloadSvg />
-            <Body2>{APPLY.download}</Body2>
+            <DownloadURL>{APPLY.download}</DownloadURL>
           </DownloadBox>
         </BottomBox>
       </InnerContainer>
@@ -48,7 +48,7 @@ const InnerContainer = styled.div`
   max-width: 390px;
 `;
 
-const Body1 = styled.p`
+const Notification = styled.p`
   color: #000;
   font-size: 14px;
   line-height: 17px;
@@ -60,7 +60,7 @@ const BottomBox = styled.div`
   align-items: center;
 `;
 
-const Body2 = styled(Body1)`
+const DownloadURL = styled(Notification)`
   font-weight: 600;
 `;
 

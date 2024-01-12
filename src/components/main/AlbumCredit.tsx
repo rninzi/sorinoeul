@@ -10,11 +10,11 @@ export const AlbumCredit = () => {
         {ALBUM_CREDIT.map((item) => (
           <LineContainer>
             <SubTitle>{item.role}</SubTitle>
-            <BodyContainer>
+            <NamesContainer>
               {item.names.map((name) => (
-                <Body>{name}</Body>
+                <Name>{name}</Name>
               ))}
-            </BodyContainer>
+            </NamesContainer>
           </LineContainer>
         ))}
       </InnerContainer>
@@ -51,13 +51,13 @@ const SubTitle = styled.h3`
   line-height: 15px;
 `;
 
-const BodyContainer = styled.div`
+const NamesContainer = styled.div`
   display: flex;
   column-gap: 5px;
   flex-wrap: wrap;
 `;
 
-const Body = styled.p`
+const Name = styled.p`
   color: #000;
   font-size: 12px;
   line-height: 15px;

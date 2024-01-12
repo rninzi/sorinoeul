@@ -26,18 +26,18 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
           <TrackInfoContainer>
             <TrackInfoInnerContainer>
               <Title>{track.title}</Title>
-              {track.vocal && <Body1>{track.vocal}</Body1>}
+              {track.vocal && <TrackInfo>{track.vocal}</TrackInfo>}
             </TrackInfoInnerContainer>
             {track.arrangers && (
               <TrackInfoInnerContainer>
-                <Body1>
+                <TrackInfo>
                   {track.songWriter
                     ? track.songWriter + ' 사/곡 '
                     : track.originalSong + ' / '}
-                </Body1>
-                <Body1>편곡 </Body1>
+                </TrackInfo>
+                <TrackInfo>편곡 </TrackInfo>
                 {track.arrangers.map((arranger) => (
-                  <Body1>{arranger}</Body1>
+                  <TrackInfo>{arranger}</TrackInfo>
                 ))}
               </TrackInfoInnerContainer>
             )}
@@ -50,7 +50,7 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
         >
           <DownloadIcon>
             <TrackDownSvg />
-            <Body2>MP3</Body2>
+            <IconTitle>MP3</IconTitle>
           </DownloadIcon>
         </a>
       </InnerContainer>
@@ -58,7 +58,7 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
         <a href={track.scoreLink} target="_blank" rel="noopener noreferrer">
           <DownloadIcon>
             <ScoreDownSvg />
-            <Body2>악보</Body2>
+            <IconTitle>악보</IconTitle>
           </DownloadIcon>
         </a>
       )}
@@ -89,13 +89,13 @@ const Title = styled.h2`
   line-height: 17px;
 `;
 
-const Body1 = styled.h3`
+const TrackInfo = styled.h3`
   color: #000;
   font-size: 14px;
   line-height: 17px;
 `;
 
-const Body2 = styled.p`
+const IconTitle = styled.p`
   color: #000;
   font-size: 10px;
   line-height: 12px;
