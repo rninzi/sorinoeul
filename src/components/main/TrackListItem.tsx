@@ -4,7 +4,7 @@ import { ReactComponent as ScoreDownSvg } from 'assets/icons/score-download-icon
 import { downloadFile } from 'utils/downloadFile';
 
 type Track = {
-  id: number;
+  trackNumber: number;
   title: string;
   vocal?: string | null;
   songWriter?: string | null;
@@ -23,7 +23,7 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
     <OuterContainer>
       <InnerContainer>
         <ItemLeftBox>
-          <Title>{String(track.id).padStart(2, '0')}.</Title>
+          <Title>{String(track.trackNumber).padStart(2, '0')}.</Title>
           <TrackInfoContainer>
             <TrackInfoInnerContainer>
               <Title>{track.title}</Title>
@@ -48,7 +48,7 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
           onClick={() =>
             downloadFile(
               track.soundTrackURL,
-              track.id + '.' + track.title + '.mp3'
+              track.trackNumber + '.' + track.title + '.mp3'
             )
           }
         >
@@ -60,7 +60,10 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
         <DownloadButton
           onClick={() =>
             track.scoreURL &&
-            downloadFile(track.scoreURL, track.id + '.' + track.title + '.pdf')
+            downloadFile(
+              track.scoreURL,
+              track.trackNumber + '.' + track.title + '.pdf'
+            )
           }
         >
           <ScoreDownSvg />

@@ -1,6 +1,6 @@
 export const mockupData = [
   {
-    id: 1,
+    trackNumber: 1,
     title: '내 안에 새겨진',
     vocal: '여건희',
     songWriter: '여건희',
@@ -12,7 +12,7 @@ export const mockupData = [
       'https://firebasestorage.googleapis.com/v0/b/sorinoeul-yfgc.appspot.com/o/score%2F1.%E1%84%82%E1%85%A2%20%E1%84%8B%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%A6%20%E1%84%89%E1%85%A2%E1%84%80%E1%85%A7%E1%84%8C%E1%85%B5%E1%86%AB.pdf?alt=media&token=2d5293f4-da38-4aa1-b79d-90ed598be92a',
   },
   {
-    id: 2,
+    trackNumber: 2,
     title: '사랑의 주님 (부제-임마누엘)',
     vocal: '고동환',
     songWriter: '고동환',
@@ -24,7 +24,7 @@ export const mockupData = [
       'https://firebasestorage.googleapis.com/v0/b/sorinoeul-yfgc.appspot.com/o/score%2F2.%E1%84%89%E1%85%A1%E1%84%85%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%B4%20%E1%84%8C%E1%85%AE%E1%84%82%E1%85%B5%E1%86%B7.pdf?alt=media&token=3e0cad34-42a8-47ab-ad77-8d3aac674bdf',
   },
   {
-    id: 3,
+    trackNumber: 3,
     title: '아 하나님의 은혜로',
     vocal: '김예은',
     songWriter: null,
@@ -36,7 +36,7 @@ export const mockupData = [
       'https://firebasestorage.googleapis.com/v0/b/sorinoeul-yfgc.appspot.com/o/score%2F3.%E1%84%8B%E1%85%A1%20%E1%84%92%E1%85%A1%E1%84%82%E1%85%A1%E1%84%82%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%B4%20%E1%84%8B%E1%85%B3%E1%86%AB%E1%84%92%E1%85%A8%E1%84%85%E1%85%A9.pdf?alt=media&token=4be34f23-ac72-45b3-85c8-57010b4011d5',
   },
   {
-    id: 4,
+    trackNumber: 4,
     title: '예수님 때문에',
     vocal: '도현희',
     songWriter: '김도훈',
@@ -48,7 +48,7 @@ export const mockupData = [
       'https://firebasestorage.googleapis.com/v0/b/sorinoeul-yfgc.appspot.com/o/score%2F4.%E1%84%8B%E1%85%A8%E1%84%89%E1%85%AE%E1%84%82%E1%85%B5%E1%86%B7%20%E1%84%84%E1%85%A2%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%A6.pdf?alt=media&token=40f75916-154e-465e-9137-3ec8413c0265',
   },
   {
-    id: 5,
+    trackNumber: 5,
     title: '생명나무 (부제-한나의 기도)',
     vocal: '고동환',
     songWriter: '고동환',
@@ -60,7 +60,7 @@ export const mockupData = [
       'https://firebasestorage.googleapis.com/v0/b/sorinoeul-yfgc.appspot.com/o/score%2F5.%E1%84%89%E1%85%A2%E1%86%BC%E1%84%86%E1%85%A7%E1%86%BC%E1%84%82%E1%85%A1%E1%84%86%E1%85%AE.pdf?alt=media&token=b5bd0644-c765-4313-a4f7-041517df58a8',
   },
   {
-    id: 6,
+    trackNumber: 6,
     title: '주를 향한 그리움',
     vocal: '양희경',
     songWriter: '김도훈',
@@ -72,7 +72,7 @@ export const mockupData = [
       'https://firebasestorage.googleapis.com/v0/b/sorinoeul-yfgc.appspot.com/o/score%2F6.%E1%84%8C%E1%85%AE%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%92%E1%85%A3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%84%8B%E1%85%AE%E1%86%B7.pdf?alt=media&token=81a20fd0-cdd9-4913-8753-a4abca620609',
   },
   {
-    id: 7,
+    trackNumber: 7,
     title: '내 안에 새겨진(Inst.)',
     vocal: null,
     songWriter: null,
@@ -83,7 +83,7 @@ export const mockupData = [
     scoreURL: null,
   },
   {
-    id: 8,
+    trackNumber: 8,
     title: '사랑의 주님(Inst.)',
     vocal: null,
     songWriter: null,
@@ -94,7 +94,7 @@ export const mockupData = [
     scoreURL: null,
   },
   {
-    id: 9,
+    trackNumber: 9,
     title: '아 하나님의 은혜로(Inst.)',
     vocal: null,
     songWriter: null,
@@ -105,7 +105,7 @@ export const mockupData = [
     scoreURL: null,
   },
   {
-    id: 10,
+    trackNumber: 10,
     title: '예수님 때문에(Inst.)',
     vocal: null,
     songWriter: null,
@@ -116,7 +116,7 @@ export const mockupData = [
     scoreURL: null,
   },
   {
-    id: 11,
+    trackNumber: 11,
     title: '생명나무(Inst.)',
     vocal: null,
     songWriter: null,
@@ -127,7 +127,7 @@ export const mockupData = [
     scoreURL: null,
   },
   {
-    id: 12,
+    trackNumber: 12,
     title: '주를 향한 그리움(Inst.)',
     vocal: null,
     songWriter: null,
