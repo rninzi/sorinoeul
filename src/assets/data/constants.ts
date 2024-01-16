@@ -182,3 +182,8 @@ export const WORSHIP_INFO = [
     youtubeURL: 'https://www.youtube.com/@user-ys5br4dg8n',
   },
 ];
+
+export const BUTTON_TEXT = {
+  prev: '< Prev',
+  next: 'Next >',
+};
