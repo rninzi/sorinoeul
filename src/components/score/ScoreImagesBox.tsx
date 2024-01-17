@@ -12,10 +12,10 @@ export const ScoreImagesBox = ({ track }: TrackListItemProps) => {
 };
 
 const Container = styled.div`
-  width: 100%;
   margin-top: 40px;
 `;
 
 const ScoreImage = styled.img`
   max-width: 340px;
+  width: 100%;
 `;
