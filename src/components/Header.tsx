@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 import { ReactComponent as LogoSvg } from 'assets/images/logo.svg';
 
-export const Header = () => {
+type HeaderProps = {
+  onLogoClick: () => void;
+};
+
+export const Header = ({ onLogoClick }: HeaderProps) => {
   return (
     <Container>
-      <Logo />
+      <Logo onClick={onLogoClick} />
     </Container>
   );
 };

@@ -4,14 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyles } from './style/GlobalStyles';
+import { BrowserRouter } from 'react-router-dom';
+import { AutoScrollToTop } from 'components/AutoScrollToTop';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <App />
+    <BrowserRouter>
+      <AutoScrollToTop />
+      <GlobalStyles />
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

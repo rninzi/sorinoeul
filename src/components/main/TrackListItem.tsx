@@ -4,40 +4,59 @@ import { ReactComponent as ScoreDownSvg } from 'assets/icons/score-download-icon
 import { downloadFile } from 'utils/downloadFile';
 
 type Track = {
-  id: number;
+  trackNumber: number;
   title: string;
-  vocal?: string | null;
-  songWriter?: string | null;
-  originalSong?: string | null;
-  arrangers?: string[] | null;
+  subtitle?: string;
+  credit: Credit;
   soundTrackURL: string;
   scoreURL?: string | null;
+  scores?: string[] | null;
+};
+
+type Credit = {
+  vocal?: string[] | null;
+  songWriter?: string[] | null;
+  originalSong?: string[] | null;
+  arrangers?: string[] | null;
+  chorus?: string[] | null;
+  kids?: string[] | null;
+  bass: string[] | null;
+  drum: string[] | null;
+  electricGuitar: string[] | null;
+  acousticGuitar?: string[] | null;
+  piano: string[] | null;
+  keyboard: string[] | null;
 };
 
 export type TrackListItemProps = {
   track: Track;
+  onClick?: () => void;
 };
 
-export const TrackListItem = ({ track }: TrackListItemProps) => {
+export const TrackListItem = ({ track, onClick }: TrackListItemProps) => {
   return (
     <OuterContainer>
       <InnerContainer>
-        <ItemLeftBox>
-          <Title>{String(track.id).padStart(2, '0')}.</Title>
+        <ItemLeftBox onClick={onClick} $isScore={!!track.scores}>
+          <Title>{String(track.trackNumber).padStart(2, '0')}.</Title>
           <TrackInfoContainer>
             <TrackInfoInnerContainer>
-              <Title>{track.title}</Title>
-              {track.vocal && <TrackInfo>{track.vocal}</TrackInfo>}
+              <Title>
+                {track.title} {track.subtitle && track.subtitle}
+              </Title>
+              {track.credit.vocal && (
+                <TrackInfo>{track.credit.vocal}</TrackInfo>
+              )}
             </TrackInfoInnerContainer>
-            {track.arrangers && (
+            {track.credit.arrangers && (
               <TrackInfoInnerContainer>
                 <TrackInfo>
-                  {track.songWriter
-                    ? track.songWriter + ' 사/곡 '
-                    : track.originalSong + ' / '}
+                  {track.credit.songWriter
+                    ? track.credit.songWriter + ' 사/곡 '
+                    : track.credit.originalSong + ' / '}
                 </TrackInfo>
                 <TrackInfo>편곡 </TrackInfo>
-                {track.arrangers.map((arranger) => (
+                {track.credit.arrangers.map((arranger) => (
                   <TrackInfo>{arranger}</TrackInfo>
                 ))}
               </TrackInfoInnerContainer>
@@ -48,7 +67,7 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
           onClick={() =>
             downloadFile(
               track.soundTrackURL,
-              track.id + '.' + track.title + '.mp3'
+              track.trackNumber + '.' + track.title + '.mp3'
             )
           }
         >
@@ -60,7 +79,10 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
         <DownloadButton
           onClick={() =>
             track.scoreURL &&
-            downloadFile(track.scoreURL, track.id + '.' + track.title + '.pdf')
+            downloadFile(
+              track.scoreURL,
+              track.trackNumber + '.' + track.title + '.pdf'
+            )
           }
         >
           <ScoreDownSvg />
@@ -74,17 +96,20 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
 const OuterContainer = styled.div`
   display: flex;
   gap: 5px;
+  width: 100%;
 `;
 
 const InnerContainer = styled.div`
   display: flex;
-  width: 330px;
+  max-width: 330px;
+  width: 100%;
   justify-content: space-between;
 `;
 
-const ItemLeftBox = styled.div`
+const ItemLeftBox = styled.div<{ $isScore: boolean }>`
   display: flex;
   gap: 15px;
+  cursor: ${({ $isScore }) => ($isScore ? 'pointer' : 'auto')};
 `;
 
 const Title = styled.h2`
