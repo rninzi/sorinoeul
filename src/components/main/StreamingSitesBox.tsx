@@ -12,21 +12,29 @@ export const StreamingSitesBox = () => {
       <TitleBox>{TITLE.streaming}</TitleBox>
       <InnerContainer>
         <a href={STREAMING_URL.melon} target="_blank" rel="noopener noreferrer">
-          <LeftLogo src={melonLogo} />
+          <Logo src={melonLogo} />
         </a>
-        <a href={STREAMING_URL.genie} target="_blank" rel="noopener noreferrer">
+        <RightAnchor
+          href={STREAMING_URL.genie}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GenieLogo src={genieLogo} />
-        </a>
+        </RightAnchor>
         <a
           href={STREAMING_URL.youtubeMusic}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LeftLogo src={youtubeMusicLogo} />
+          <Logo src={youtubeMusicLogo} />
         </a>
-        <a href={STREAMING_URL.bugs} target="_blank" rel="noopener noreferrer">
-          <RightLogo src={bugsLogo} />
-        </a>
+        <RightAnchor
+          href={STREAMING_URL.bugs}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Logo src={bugsLogo} />
+        </RightAnchor>
       </InnerContainer>
     </Container>
   );
@@ -41,22 +49,21 @@ const InnerContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 70px;
+  column-gap: 10px;
   margin-top: 65px;
   justify-items: center;
   align-items: center;
 `;
 
-const LeftLogo = styled.img`
+const RightAnchor = styled.a`
+  justify-self: flex-start;
+`;
+
+const Logo = styled.img`
   width: 120px;
   height: 35px;
 `;
 
-const RightLogo = styled.img`
-  width: 120px;
-  height: 35px;
-  justify-self: left;
-`;
-
-const GenieLogo = styled(RightLogo)`
+const GenieLogo = styled(Logo)`
   height: 40px;
 `;
