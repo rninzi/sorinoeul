@@ -6,9 +6,11 @@ import { downloadFile } from 'utils/downloadFile';
 type Track = {
   trackNumber: number;
   title: string;
+  subtitle?: string;
   credit: Credit;
   soundTrackURL: string;
   scoreURL?: string | null;
+  scores?: string[] | null;
 };
 
 type Credit = {
@@ -38,7 +40,9 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
           <Title>{String(track.trackNumber).padStart(2, '0')}.</Title>
           <TrackInfoContainer>
             <TrackInfoInnerContainer>
-              <Title>{track.title}</Title>
+              <Title>
+                {track.title} {track.subtitle && track.subtitle}
+              </Title>
               {track.credit.vocal && (
                 <TrackInfo>{track.credit.vocal}</TrackInfo>
               )}

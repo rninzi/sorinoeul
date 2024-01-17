@@ -11,13 +11,16 @@ export const TrackTitleBox = ({ track }: TrackListItemProps) => {
         <AlbumArtImage src={albumArt} />
       </AlbumArtContainer>
       <TitleBox>
-        <TrackInfoBox>
+        <TrackInfoBox $isSubTitle={!!track.subtitle}>
           <TrackNumber>
             {String(track.trackNumber).padStart(2, '0')}.
           </TrackNumber>
           <TitleInnerContainer $isScore={!!track.scoreURL}>
             <div>
               <TrackTitle>{track.title}</TrackTitle>
+              {track.subtitle && (
+                <TrackSubTitle>{track.subtitle}</TrackSubTitle>
+              )}
               <TrackVocal>{track.credit.vocal}</TrackVocal>
             </div>
             <IconContainer>
@@ -76,11 +79,11 @@ const TitleInnerContainer = styled.div<{ $isScore: boolean }>`
   justify-content: space-between;
 `;
 
-const TrackInfoBox = styled.div`
+const TrackInfoBox = styled.div<{ $isSubTitle: boolean }>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 7px;
+  gap: ${({ $isSubTitle }) => ($isSubTitle ? '2px' : '7px')};
 `;
 
 const TrackNumber = styled.h2`
@@ -90,11 +93,18 @@ const TrackNumber = styled.h2`
   line-height: 29px;
 `;
 
-const TrackTitle = styled.h3`
+const TrackTitle = styled.h2`
   color: #000;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+`;
+
+const TrackSubTitle = styled.h3`
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
 `;
 
 const TrackVocal = styled.p`
