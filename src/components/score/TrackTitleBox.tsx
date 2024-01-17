@@ -75,7 +75,7 @@ const TitleBox = styled.div`
 
 const TitleInnerContainer = styled.div<{ $isScore: boolean }>`
   display: flex;
-  max-width: ${({ $isScore }) => ($isScore ? '250px' : '210px')};
+  max-width: ${({ $isScore }) => ($isScore ? '220px' : '200px')};
   justify-content: space-between;
 `;
 
