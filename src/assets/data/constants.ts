@@ -186,6 +186,7 @@ export const WORSHIP_INFO = [
 export const BUTTON_TEXT = {
   prev: '< Prev',
   next: 'Next >',
+  trackList: 'TRACK LIST',
 };
 
 export const SOUNDTRACK_CREDIT_ROLE = {
