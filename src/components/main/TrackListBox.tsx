@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import albumArt from 'assets/images/album-art.png';
 import { TrackListItem } from './TrackListItem';
-import { mockupData } from 'assets/data/mockupData';
+import { trackListData } from 'assets/data/mockupData';
 
 export const TrackListBox = () => {
   return (
@@ -10,7 +10,7 @@ export const TrackListBox = () => {
         <AlbumArtImg src={albumArt} />
       </AlbumArtContainer>
       <TrackList>
-        {mockupData.map((data) => (
+        {trackListData.map((data) => (
           <TrackListItem track={data} />
         ))}
       </TrackList>
