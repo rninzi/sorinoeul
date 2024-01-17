@@ -187,3 +187,18 @@ export const BUTTON_TEXT = {
   prev: '< Prev',
   next: 'Next >',
 };
+
+export const SOUNDTRACK_CREDIT_ROLE = {
+  songWriter: '작사, 작곡',
+  song: '노래',
+  arrangers: '편곡',
+  vocal: '보컬',
+  chorus: '코러스',
+  bass: '베이스',
+  drum: '드럼',
+  electricGuitar: '일렉기타',
+  acousticGuitar: '어쿠스틱기타',
+  piano: '피아노',
+  keyboard: '키보드',
+  kids: '키즈 코러스',
+};
