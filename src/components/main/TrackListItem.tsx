@@ -30,13 +30,14 @@ type Credit = {
 
 export type TrackListItemProps = {
   track: Track;
+  onClick?: () => void;
 };
 
-export const TrackListItem = ({ track }: TrackListItemProps) => {
+export const TrackListItem = ({ track, onClick }: TrackListItemProps) => {
   return (
     <OuterContainer>
       <InnerContainer>
-        <ItemLeftBox>
+        <ItemLeftBox onClick={onClick} $isScore={!!track.scores}>
           <Title>{String(track.trackNumber).padStart(2, '0')}.</Title>
           <TrackInfoContainer>
             <TrackInfoInnerContainer>
@@ -95,17 +96,20 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
 const OuterContainer = styled.div`
   display: flex;
   gap: 5px;
+  width: 100%;
 `;
 
 const InnerContainer = styled.div`
   display: flex;
-  width: 330px;
+  max-width: 330px;
+  width: 100%;
   justify-content: space-between;
 `;
 
-const ItemLeftBox = styled.div`
+const ItemLeftBox = styled.div<{ $isScore: boolean }>`
   display: flex;
   gap: 15px;
+  cursor: ${({ $isScore }) => ($isScore ? 'pointer' : 'auto')};
 `;
 
 const Title = styled.h2`
