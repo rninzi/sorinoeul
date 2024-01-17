@@ -18,7 +18,7 @@ export const TrackTitleBox = ({ track }: TrackListItemProps) => {
           <TitleInnerContainer $isScore={!!track.scoreURL}>
             <div>
               <TrackTitle>{track.title}</TrackTitle>
-              <TrackVocal>{track.vocal}</TrackVocal>
+              <TrackVocal>{track.credit.vocal}</TrackVocal>
             </div>
             <IconContainer>
               <a

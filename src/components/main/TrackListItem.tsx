@@ -6,12 +6,24 @@ import { downloadFile } from 'utils/downloadFile';
 type Track = {
   trackNumber: number;
   title: string;
-  vocal?: string | null;
-  songWriter?: string | null;
-  originalSong?: string | null;
-  arrangers?: string[] | null;
+  credit: Credit;
   soundTrackURL: string;
   scoreURL?: string | null;
+};
+
+type Credit = {
+  vocal?: string[] | null;
+  songWriter?: string[] | null;
+  originalSong?: string[] | null;
+  arrangers?: string[] | null;
+  chorus?: string[] | null;
+  kids?: string[] | null;
+  bass: string[] | null;
+  drum: string[] | null;
+  electricGuitar: string[] | null;
+  acousticGuitar?: string[] | null;
+  piano: string[] | null;
+  keyboard: string[] | null;
 };
 
 export type TrackListItemProps = {
@@ -27,17 +39,19 @@ export const TrackListItem = ({ track }: TrackListItemProps) => {
           <TrackInfoContainer>
             <TrackInfoInnerContainer>
               <Title>{track.title}</Title>
-              {track.vocal && <TrackInfo>{track.vocal}</TrackInfo>}
+              {track.credit.vocal && (
+                <TrackInfo>{track.credit.vocal}</TrackInfo>
+              )}
             </TrackInfoInnerContainer>
-            {track.arrangers && (
+            {track.credit.arrangers && (
               <TrackInfoInnerContainer>
                 <TrackInfo>
-                  {track.songWriter
-                    ? track.songWriter + ' 사/곡 '
-                    : track.originalSong + ' / '}
+                  {track.credit.songWriter
+                    ? track.credit.songWriter + ' 사/곡 '
+                    : track.credit.originalSong + ' / '}
                 </TrackInfo>
                 <TrackInfo>편곡 </TrackInfo>
-                {track.arrangers.map((arranger) => (
+                {track.credit.arrangers.map((arranger) => (
                   <TrackInfo>{arranger}</TrackInfo>
                 ))}
               </TrackInfoInnerContainer>
