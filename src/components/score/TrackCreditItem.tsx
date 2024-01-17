@@ -21,7 +21,9 @@ export const TrackCreditItem = ({ role, names }: TrackCreditItemProps) => {
 const Container = styled.div`
   display: flex;
   gap: 5px;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 340px;
+  word-break: keep-all;
 `;
 
 const Role = styled.h3`
