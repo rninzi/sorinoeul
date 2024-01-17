@@ -63,6 +63,7 @@ const InfoItem = styled.li`
   font-size: 13px;
   line-height: 16px;
   list-style-type: disc;
+  word-break: keep-all;
 `;
 
 const Anchor = styled.a`
