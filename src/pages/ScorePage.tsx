@@ -53,8 +53,9 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   background: #f4f4f5;
-  padding-left: 50px;
+  padding-left: 40px;
   padding-bottom: 50px;
+  padding-right: 20px;
 `;
 
 const EmptyContainer = styled.div`
