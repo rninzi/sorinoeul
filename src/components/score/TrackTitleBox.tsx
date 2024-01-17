@@ -71,19 +71,21 @@ const AlbumArtImage = styled.img`
 const TitleBox = styled.div`
   display: flex;
   width: 100%;
+  word-break: keep-all;
 `;
 
 const TitleInnerContainer = styled.div<{ $isScore: boolean }>`
   display: flex;
-  max-width: ${({ $isScore }) => ($isScore ? '220px' : '200px')};
+  max-width: ${({ $isScore }) => ($isScore ? '230px' : '200px')};
   justify-content: space-between;
+  align-items: center;
 `;
 
 const TrackInfoBox = styled.div<{ $isSubTitle: boolean }>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: ${({ $isSubTitle }) => ($isSubTitle ? '2px' : '7px')};
+  gap: ${({ $isSubTitle }) => ($isSubTitle ? '0' : '7px')};
 `;
 
 const TrackNumber = styled.h2`
@@ -104,7 +106,7 @@ const TrackSubTitle = styled.h3`
   color: #000;
   font-size: 15px;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 16px;
 `;
 
 const TrackVocal = styled.p`
