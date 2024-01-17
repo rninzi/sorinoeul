@@ -2,16 +2,24 @@ import styled from 'styled-components';
 import albumArt from 'assets/images/album-art.png';
 import { TrackListItem } from './TrackListItem';
 import { trackListData } from 'assets/data/mockupData';
+import { useNavigate } from 'react-router-dom';
 
 export const TrackListBox = () => {
+  const navigate = useNavigate();
+
   return (
-    <Container>
+    <Container id="trackList">
       <AlbumArtContainer>
         <AlbumArtImg src={albumArt} />
       </AlbumArtContainer>
       <TrackList>
         {trackListData.map((data) => (
-          <TrackListItem track={data} />
+          <TrackListItem
+            track={data}
+            onClick={() =>
+              data.trackNumber < 7 && navigate(`/score/${data.trackNumber}`)
+            }
+          />
         ))}
       </TrackList>
     </Container>
@@ -21,8 +29,11 @@ export const TrackListBox = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  padding-top: 88px;
   margin-bottom: 105px;
   align-items: center;
+  max-width: 360px;
+  width: 100%;
 `;
 
 const AlbumArtContainer = styled.div`
@@ -43,4 +54,5 @@ const TrackList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 `;
