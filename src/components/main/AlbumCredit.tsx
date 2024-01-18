@@ -8,11 +8,11 @@ export const AlbumCredit = () => {
       <TitleBox>{TITLE.albumCredit}</TitleBox>
       <InnerContainer>
         {ALBUM_CREDIT.map((item) => (
-          <LineContainer>
+          <LineContainer key={item.role}>
             <SubTitle>{item.role}</SubTitle>
             <NamesContainer>
-              {item.names.map((name) => (
-                <Name>{name}</Name>
+              {item.names.map((name, index) => (
+                <Name key={index}>{name}</Name>
               ))}
             </NamesContainer>
           </LineContainer>

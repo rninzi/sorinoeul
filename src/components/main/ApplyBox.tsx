@@ -14,7 +14,11 @@ export const ApplyBox = () => {
       <InnerContainer>
         <Notification>{APPLY.notify}</Notification>
         {SERVICE_INFO.map((item) => (
-          <InformationBox title={item.title} description={item.description} />
+          <InformationBox
+            key={item.title}
+            title={item.title}
+            description={item.description}
+          />
         ))}
         <BottomBox>
           <Notification>

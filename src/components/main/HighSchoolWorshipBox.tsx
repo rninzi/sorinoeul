@@ -8,8 +8,9 @@ export const HighSchoolWorshipBox = () => {
     <Container>
       <TitleBox>{TITLE.worshipInfo}</TitleBox>
       <InnerContainer>
-        {WORSHIP_INFO.map((item) => (
+        {WORSHIP_INFO.map((item, index) => (
           <WorshipInfoBox
+            key={index}
             imageSrc={item.imgSrc}
             target={item.target}
             place={item.place}

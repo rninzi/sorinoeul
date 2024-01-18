@@ -15,6 +15,7 @@ export const TrackListBox = () => {
       <TrackList>
         {trackListData.map((data) => (
           <TrackListItem
+            key={data.trackNumber}
             track={data}
             onClick={() =>
               data.trackNumber < 7 && navigate(`/score/${data.trackNumber}`)

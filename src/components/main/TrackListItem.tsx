@@ -56,8 +56,8 @@ export const TrackListItem = ({ track, onClick }: TrackListItemProps) => {
                     : track.credit.originalSong + ' / '}
                 </TrackInfo>
                 <TrackInfo>편곡 </TrackInfo>
-                {track.credit.arrangers.map((arranger) => (
-                  <TrackInfo>{arranger}</TrackInfo>
+                {track.credit.arrangers.map((arranger, index) => (
+                  <TrackInfo key={index}>{arranger}</TrackInfo>
                 ))}
               </TrackInfoInnerContainer>
             )}
