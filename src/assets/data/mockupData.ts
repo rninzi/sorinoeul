@@ -88,7 +88,7 @@ export const soundtrackCreditData = [
     keyboard: ['최현경'],
   },
   {
-    vocal: ['윤소정'],
+    vocal: ['윤소정', '양희경'],
     songWriter: ['서정완'],
     originalSong: null,
     arrangers: ['김소린'],
