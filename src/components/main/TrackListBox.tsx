@@ -47,7 +47,7 @@ const AlbumArtContainer = styled.div`
 `;
 
 const AlbumArtImg = styled.img`
-  width: 90%;
+  max-width: 267px;
   margin: 15px;
 `;
 
