@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 10px;
         vertical-align: baseline;
     }
-    body{
+    *, body{
         line-height: 1;
         font-family: pretendard, 'Noto Sans KR', sans-serif;
     }
