@@ -123,6 +123,8 @@ export const ALBUM_CREDIT_LINE_BREAK = [3, 9, 13];
 export const APPLY = {
   notify: '소리노을에서는 다음과 같은 봉사를 합니다.',
   inquiry: '🤗 문의',
+  promotion:
+    '노래와 악기 연주, 춤으로 찬양하며 예배에 헌신하고 봉사할 친구들의 많은 지원을 바랍니다.',
   email: 'sorinoeul@gmail.com',
   download: '소리노을 원서 다운로드',
   fileName: '소리노을 응시원서',
@@ -152,12 +154,12 @@ export const SERVICE_INFO = [
   {
     title: '🙆워십, 율동',
     description:
-      '예배 때 드려지는 찬양의 율동과 헌금송으로 드려지는 워십댄스를 연습하고 예배를 준비합니다. 노래와 악기 연주, 춤으로 찬양하며 예배에 헌신하고 봉사할 친구들의 많은 지원을 바랍니다.',
+      '예배 때 드려지는 찬양의 율동과 헌금송으로 드려지는 워십댄스를 연습하고 예배를 준비합니다.',
   },
 ];
 
 export const STREAMING_INFO =
-  'CARVED IN MY SOUL 앨범은 멜론, 유튜브 뮤직, 벅스, 지니 등 스트리밍 사이트에서도 들으실 수 있습니다. 이 음반에 수록된 찬송가는 (재)한국찬송가공회의 허락을 받은 것입니다. 승인번호 : N0.41-067';
+  'CARVED IN MY SOUL 앨범은 멜론, 유튜브 뮤직, 벅스, 지니 등 스트리밍 사이트에서도 들으실 수 있습니다.\n이 음반에 수록된 찬송가는 (재)한국찬송가공회의 허락을 받은 것입니다. 승인번호 : N0.41-067';
 
 export const WORSHIP_INFO_LIST = {
   target: '대상 : ',
@@ -189,6 +191,7 @@ export const BUTTON_TEXT = {
   prev: '< Prev',
   next: 'Next >',
   trackList: 'TRACK LIST',
+  main: 'MAIN',
 };
 
 export const SOUNDTRACK_CREDIT_ROLE = {
@@ -205,3 +208,21 @@ export const SOUNDTRACK_CREDIT_ROLE = {
   keyboard: '키보드',
   kids: '키즈 코러스',
 };
+
+export const HYPERLINKS = [
+  {
+    icon: '🎶',
+    title: '소리노을 Youtube',
+    url: 'https://www.youtube.com/@Sorinoeul',
+  },
+  {
+    icon: '💌',
+    title: '소리노을 지원하기',
+    url: '/apply',
+  },
+  {
+    icon: '✝️',
+    title: '고등부 예배 안내',
+    url: '/worshipInformation',
+  },
+];
