@@ -11,12 +11,13 @@ export const StreamingSitesBox = () => {
 
 const Container = styled.div`
   width: calc(100% - 30px);
-  margin: 50px 0 0 30px;
+  margin: 20px 0 0 30px;
   word-break: keep-all;
+  white-space: pre-line;
 `;
 
 const StreamingInfo = styled.p`
   color: #000;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 13px;
 `;
