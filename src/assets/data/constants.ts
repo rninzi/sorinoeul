@@ -114,7 +114,7 @@ export const ALBUM_CREDIT = [
   },
   {
     role: 'Art Work & Design',
-    names: ['김소린'],
+    names: ['김소린', '김예은'],
   },
 ];
 
