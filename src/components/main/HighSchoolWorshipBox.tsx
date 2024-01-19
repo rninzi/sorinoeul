@@ -28,12 +28,12 @@ const Container = styled.div`
   width: calc(100% - 30px);
   display: flex;
   flex-direction: column;
-  margin: 105px 0 90px 30px;
+  margin: 0 0 90px 30px;
 `;
 
 const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   margin-top: 30px;
 `;
