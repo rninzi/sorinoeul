@@ -33,7 +33,7 @@ const Container = styled.div`
   padding-top: 88px;
   margin-bottom: 105px;
   align-items: center;
-  max-width: 360px;
+  max-width: 340px;
   width: 100%;
 `;
 
