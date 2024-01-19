@@ -119,6 +119,7 @@ const Title = styled.h2`
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
+  min-width: fit-content;
 `;
 
 const TrackInfo = styled.h3`
