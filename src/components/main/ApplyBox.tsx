@@ -20,6 +20,7 @@ export const ApplyBox = () => {
             description={item.description}
           />
         ))}
+        <Notification>{APPLY.promotion}</Notification>
         <BottomBox>
           <Notification>
             {APPLY.inquiry} : {APPLY.email}
@@ -40,7 +41,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: calc(100% - 30px);
-  margin: 105px 0 0 30px;
+  margin: 0 0 0 30px;
   word-break: keep-all;
 `;
 
@@ -61,6 +62,7 @@ const BottomBox = styled.div`
   display: flex;
   gap: 7px;
   align-items: center;
+  padding-right: 10px;
 `;
 
 const DownloadURL = styled(Notification)`
