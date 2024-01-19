@@ -44,9 +44,8 @@ export const TrackListItem = ({ track, onClick }: TrackListItemProps) => {
               <Title>
                 {track.title} {track.subtitle && track.subtitle}
               </Title>
-              {track.credit.vocal && (
-                <TrackInfo>{track.credit.vocal}</TrackInfo>
-              )}
+              {track.credit.vocal &&
+                track.credit.vocal.map((name) => <TrackInfo>{name}</TrackInfo>)}
             </TrackInfoInnerContainer>
             {track.credit.arrangers && (
               <TrackInfoInnerContainer>
@@ -106,6 +105,7 @@ const InnerContainer = styled.div`
   max-width: 310px;
   width: 100%;
   justify-content: space-between;
+  word-break: keep-all;
 `;
 
 const ItemLeftBox = styled.div<{ $isScore: boolean }>`
