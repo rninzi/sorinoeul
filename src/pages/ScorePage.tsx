@@ -35,7 +35,7 @@ export const ScorePage = () => {
           <TrackTitleBox track={trackListData[Number(trackNumber) - 1]} />
           <TrackCreditBox track={trackListData[Number(trackNumber) - 1]} />
           <ScoreImagesBox track={trackListData[Number(trackNumber) - 1]} />
-          <BackButton onClick={() => navigate('/')}>
+          <BackButton href={'#trackList'} onClick={() => navigate('/')}>
             {BUTTON_TEXT.trackList}
           </BackButton>
         </Container>

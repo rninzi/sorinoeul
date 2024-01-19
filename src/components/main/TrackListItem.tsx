@@ -44,9 +44,8 @@ export const TrackListItem = ({ track, onClick }: TrackListItemProps) => {
               <Title>
                 {track.title} {track.subtitle && track.subtitle}
               </Title>
-              {track.credit.vocal && (
-                <TrackInfo>{track.credit.vocal}</TrackInfo>
-              )}
+              {track.credit.vocal &&
+                track.credit.vocal.map((name) => <TrackInfo>{name}</TrackInfo>)}
             </TrackInfoInnerContainer>
             {track.credit.arrangers && (
               <TrackInfoInnerContainer>
@@ -75,7 +74,7 @@ export const TrackListItem = ({ track, onClick }: TrackListItemProps) => {
           <IconTitle>MP3</IconTitle>
         </DownloadButton>
       </InnerContainer>
-      {track.scoreURL && (
+      {track.scoreURL ? (
         <DownloadButton
           onClick={() =>
             track.scoreURL &&
@@ -88,6 +87,8 @@ export const TrackListItem = ({ track, onClick }: TrackListItemProps) => {
           <ScoreDownSvg />
           <IconTitle>악보</IconTitle>
         </DownloadButton>
+      ) : (
+        <EmptyDownloadBox />
       )}
     </OuterContainer>
   );
@@ -101,9 +102,10 @@ const OuterContainer = styled.div`
 
 const InnerContainer = styled.div`
   display: flex;
-  max-width: 330px;
+  max-width: 310px;
   width: 100%;
   justify-content: space-between;
+  word-break: keep-all;
 `;
 
 const ItemLeftBox = styled.div<{ $isScore: boolean }>`
@@ -117,6 +119,7 @@ const Title = styled.h2`
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
+  min-width: fit-content;
 `;
 
 const TrackInfo = styled.h3`
@@ -146,4 +149,11 @@ const DownloadButton = styled.button`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+`;
+
+const EmptyDownloadBox = styled.div`
+  display: flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 34px;
 `;

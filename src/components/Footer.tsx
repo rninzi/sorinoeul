@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <Container>
       <Logo />
-      <CopyRight>{COPYRIGHT}</CopyRight>
+      <Copyright>{COPYRIGHT.footer}</Copyright>
     </Container>
   );
 };
@@ -27,7 +27,7 @@ const Logo = styled(LogoSvg)`
   height: 52px;
 `;
 
-const CopyRight = styled.p`
+const Copyright = styled.p`
   color: #000;
   font-size: 10px;
   line-height: 17px;

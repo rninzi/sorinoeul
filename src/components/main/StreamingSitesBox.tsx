@@ -1,69 +1,23 @@
 import styled from 'styled-components';
-import { TitleBox } from 'components/TitleBox';
-import { STREAMING_URL, TITLE } from 'assets/data/constants';
-import melonLogo from 'assets/images/logo-melon.png';
-import genieLogo from 'assets/images/logo-genie.png';
-import youtubeMusicLogo from 'assets/images/logo-youtube-music.png';
-import bugsLogo from 'assets/images/logo-bugs.png';
+import { STREAMING_INFO } from 'assets/data/constants';
 
 export const StreamingSitesBox = () => {
   return (
     <Container>
-      <TitleBox>{TITLE.streaming}</TitleBox>
-      <InnerContainer>
-        <a href={STREAMING_URL.melon} target="_blank" rel="noopener noreferrer">
-          <Logo src={melonLogo} />
-        </a>
-        <RightAnchor
-          href={STREAMING_URL.genie}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GenieLogo src={genieLogo} />
-        </RightAnchor>
-        <a
-          href={STREAMING_URL.youtubeMusic}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Logo src={youtubeMusicLogo} />
-        </a>
-        <RightAnchor
-          href={STREAMING_URL.bugs}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Logo src={bugsLogo} />
-        </RightAnchor>
-      </InnerContainer>
+      <StreamingInfo>{STREAMING_INFO}</StreamingInfo>
     </Container>
   );
 };
 
 const Container = styled.div`
   width: calc(100% - 30px);
-  margin: 105px 0 0 30px;
+  margin: 20px 0 0 30px;
+  word-break: keep-all;
+  white-space: pre-line;
 `;
 
-const InnerContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 70px;
-  column-gap: 10px;
-  margin-top: 65px;
-  justify-items: center;
-  align-items: center;
-`;
-
-const RightAnchor = styled.a`
-  justify-self: flex-start;
-`;
-
-const Logo = styled.img`
-  width: 120px;
-  height: 35px;
-`;
-
-const GenieLogo = styled(Logo)`
-  height: 40px;
+const StreamingInfo = styled.p`
+  color: #000;
+  font-size: 11px;
+  line-height: 13px;
 `;
