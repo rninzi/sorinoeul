@@ -6,6 +6,8 @@ import { ScorePage } from 'pages/ScorePage';
 import { Routes, Route } from 'react-router-dom';
 import { scrollToTop } from 'utils/scrollToTop';
 import { useNavigate } from 'react-router-dom';
+import { WorshipInfoPage } from 'pages/WorshipInfoPage';
+import { ApplyPage } from 'pages/ApplyPage';
 
 const App = () => {
   const navigate = useNavigate();
@@ -21,6 +23,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/score/:trackNumber" element={<ScorePage />} />
+        <Route path="/apply" element={<ApplyPage />} />
+        <Route path="/worshipInformation" element={<WorshipInfoPage />} />
       </Routes>
       <Footer />
     </Container>
