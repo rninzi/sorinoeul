@@ -23,13 +23,15 @@ export const GreetingBox = () => {
 
 const Container = styled.div`
   max-width: 366px;
-  height: 366px;
+  height: 100%;
   background: #fff;
   border-radius: 30px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin: 0 30px;
+  padding-bottom: 19px;
 `;
 
 const ImageBox = styled.img`
