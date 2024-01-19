@@ -3,15 +3,17 @@ import styled from 'styled-components';
 import { ReactComponent as BackButtonIcon } from 'assets/icons/back-button-icon.svg';
 
 type BackButtonProps = {
+  href: string;
   onClick: () => void;
 };
 
 export const BackButton = ({
+  href,
   onClick,
   children,
 }: PropsWithChildren<BackButtonProps>) => {
   return (
-    <Container href="#trackList" onClick={onClick}>
+    <Container href={href} onClick={onClick}>
       <BackButtonIcon />
       {children}
     </Container>
