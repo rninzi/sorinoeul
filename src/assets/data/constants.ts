@@ -156,13 +156,8 @@ export const SERVICE_INFO = [
   },
 ];
 
-export const STREAMING_URL = {
-  melon: 'https://www.melon.com/album/detail.htm?albumId=11388394',
-  genie: 'https://www.genie.co.kr/detail/albumInfo?axnm=84630791',
-  youtubeMusic:
-    'https://music.youtube.com/playlist?list=OLAK5uy_nFwXHaWkX4D3fwDmKYIKOvaZcwjUWaQBA',
-  bugs: 'https://music.bugs.co.kr/album/20613573?wl_ref=list_ab_03',
-};
+export const STREAMING_INFO =
+  'CARVED IN MY SOUL 앨범은 멜론, 유튜브 뮤직, 벅스, 지니 등 스트리밍 사이트에서도 들으실 수 있습니다. 이 음반에 수록된 찬송가는 (재)한국찬송가공회의 허락을 받은 것입니다. 승인번호 : N0.41-067';
 
 export const WORSHIP_INFO_LIST = {
   target: '대상 : ',
