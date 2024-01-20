@@ -101,7 +101,7 @@ export const ALBUM_CREDIT = [
     names: ['오경환 @Sorinoeul Studio'],
   },
   {
-    role: 'Recorded Engineer',
+    role: 'Recording Engineer',
     names: ['김택진 @Sorinoeul Studio'],
   },
   {
