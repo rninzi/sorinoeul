@@ -33,7 +33,7 @@ const Container = styled.div`
   padding-top: 88px;
   margin-bottom: 105px;
   align-items: center;
-  max-width: 340px;
+  max-width: 360px;
   width: 100%;
 `;
 
@@ -56,4 +56,5 @@ const TrackList = styled.div`
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  padding: 0 14px;
 `;
