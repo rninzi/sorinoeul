@@ -5,9 +5,6 @@ import { ALBUM_INTRODUCTION } from 'assets/data/constants';
 export const IntroductionBox = () => {
   return (
     <>
-      <AlbumArtContainer>
-        <AlbumArt src={albumArt} />
-      </AlbumArtContainer>
       <AlbumIntro>{ALBUM_INTRODUCTION}</AlbumIntro>
     </>
   );
