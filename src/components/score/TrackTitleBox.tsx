@@ -3,6 +3,7 @@ import albumArt from 'assets/images/album-art.png';
 import { ReactComponent as AudioPlayIcon } from 'assets/icons/audio-play-icon.svg';
 import { ReactComponent as OpenPdfIcon } from 'assets/icons/open-pdf-icon.svg';
 import { TrackListItemProps } from 'components/main/TrackListItem';
+import { isValidArray } from "../../utils/isValidArray";
 
 export const TrackTitleBox = ({ track }: TrackListItemProps) => {
   return (
@@ -21,7 +22,11 @@ export const TrackTitleBox = ({ track }: TrackListItemProps) => {
               {track.subtitle && (
                 <TrackSubTitle>{track.subtitle}</TrackSubTitle>
               )}
-              <TrackVocal>{track.credit.vocal}</TrackVocal>
+              {track.credit.vocal && isValidArray(track.credit.vocal) && (
+                <TrackVocal>
+                  {track.credit.vocal.join(" ")}
+                </TrackVocal>
+              )}
             </div>
             <IconContainer>
               <a
