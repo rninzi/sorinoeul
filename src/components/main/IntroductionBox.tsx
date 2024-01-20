@@ -16,7 +16,6 @@ const AlbumIntro = styled.p`
   line-height: 17px;
   margin: 0 20px 0 30px;
   white-space: pre-line;
-  word-break: keep-all;
   max-width: 390px;
   align-self: flex-start;
 `;
