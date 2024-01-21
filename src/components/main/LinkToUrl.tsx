@@ -7,7 +7,7 @@ export const LinkToUrl = () => {
   return (
     <Container id="hyperlink">
       {HYPERLINKS.map((item, index) => (
-        <LineContainer>
+        <LineContainer key={item.title}>
           {index > 0 ? (
             <HyperlinkButton onClick={() => navigate(item.url)}>
               <Icon>{item.icon}</Icon>
@@ -18,6 +18,7 @@ export const LinkToUrl = () => {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
+              key={item.title}
             >
               <Icon>{item.icon}</Icon>
               <Title>{item.title}</Title>

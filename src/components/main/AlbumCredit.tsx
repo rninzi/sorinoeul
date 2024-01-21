@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { TitleBox } from 'components/TitleBox';
 import {
@@ -16,8 +17,8 @@ export const AlbumCredit = () => {
       <TitleBox>{TITLE.albumCredit}</TitleBox>
       <InnerContainer>
         {ALBUM_CREDIT.map((item, id) => (
-          <>
-            <LineContainer key={item.role}>
+          <React.Fragment key={item.role}>
+            <LineContainer>
               <Role>{item.role}</Role>
               <NamesContainer>
                 {item.names.map((name, index) => (
@@ -28,9 +29,13 @@ export const AlbumCredit = () => {
             {ALBUM_CREDIT_LINE_BREAK.map(
               (lineNumber) =>
                 id === lineNumber &&
-                (id === 3 && width < 422 ? <></> : <LineBreakContainer />)
+                (id === 3 && width < 422 ? (
+                  <React.Fragment key={lineNumber}></React.Fragment>
+                ) : (
+                  <LineBreakContainer key={lineNumber} />
+                ))
             )}
-          </>
+          </React.Fragment>
         ))}
       </InnerContainer>
       <Copyright>{COPYRIGHT.albumCredit}</Copyright>

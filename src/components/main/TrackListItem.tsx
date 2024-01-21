@@ -45,7 +45,9 @@ export const TrackListItem = ({ track, onClick }: TrackListItemProps) => {
                 {track.title} {track.subtitle && track.subtitle}
               </Title>
               {track.credit.vocal &&
-                track.credit.vocal.map((name) => <TrackInfo>{name}</TrackInfo>)}
+                track.credit.vocal.map((name, index) => (
+                  <TrackInfo key={index}>{name}</TrackInfo>
+                ))}
             </TrackInfoInnerContainer>
             {track.credit.arrangers && (
               <TrackInfoInnerContainer>
