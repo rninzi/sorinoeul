@@ -159,7 +159,7 @@ export const SERVICE_INFO = [
 ];
 
 export const STREAMING_INFO =
-  'CARVED IN MY SOUL 앨범은 멜론, 유튜브 뮤직, 벅스, 지니 등 스트리밍 사이트에서도 들으실 수 있습니다.\n이 음반에 수록된 찬송가는 (재)한국찬송가공회의 허락을 받은 것입니다. 승인번호 : N0.41-067';
+  'CARVED IN MY SOUL 앨범은 멜론, 유튜브 뮤직, 벅스, 지니 등 스트리밍 사이트에서도 들으실 수 있습니다.\n이 음반에 수록된 찬송가는 (재)한국찬송가공회의 허락을 받은 것입니다.\n승인번호 : N0.41-067';
 
 export const WORSHIP_INFO_LIST = {
   target: '대상 : ',
