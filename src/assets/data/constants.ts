@@ -175,7 +175,7 @@ export const WORSHIP_INFO = [
     place: '제2교육관 6층 야고보 성전',
     time: '1부 8시 30분, 2부 10시 30분',
     youtubeID: '@highyfgc',
-    youtubeURL: 'https://www.youtube.com/@highyfgc',
+    youtubeURL: 'https://m.youtube.com/@highyfgc',
   },
   {
     imgSrc: highSchoolSenior,
@@ -183,7 +183,7 @@ export const WORSHIP_INFO = [
     place: '비전센터 6층 브니엘 성전',
     time: '오전 8시 30분',
     youtubeID: '@user-ys5br4dg8n',
-    youtubeURL: 'https://www.youtube.com/@user-ys5br4dg8n',
+    youtubeURL: 'https://m.youtube.com/@user-ys5br4dg8n',
   },
 ];
 
@@ -213,7 +213,7 @@ export const HYPERLINKS = [
   {
     icon: '🎶',
     title: '소리노을 Youtube',
-    url: 'https://www.youtube.com/@Sorinoeul',
+    url: 'https://m.youtube.com/@Sorinoeul',
   },
   {
     icon: '💌',
