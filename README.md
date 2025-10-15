@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# 🎵 Sorinoeul Worship Team Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> 교회 찬양팀 '소리노을'의 앨범과 활동을 소개하는 웹사이트입니다.  
+> React와 TypeScript 기반으로 제작되었으며,  
+> 앨범 트랙리스트와 음원・악보 다운로드 등 음악 콘텐츠 중심으로 구성되었습니다.
 
-## Available Scripts
+[🔗 배포 링크](https://sorinoeul.vercel.app/)
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## 🪄 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 음악팀 앨범 소개 및 트랙리스트 확인
+- 곡별 음원 / 악보 다운로드
+- 곡 상세 정보 및 크레딧 열람
+- 팀 소개 및 SNS 연동
+- 지원서 다운로드 및 활동 안내
+- 예배 일정 정보 제공
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## 🛠️ 개발 스택
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| 구분               | 사용 기술                           |
+| ------------------ | ----------------------------------- |
+| **Framework**      | React (Create React App)            |
+| **Language**       | TypeScript                          |
+| **Routing**        | React Router                        |
+| **Styling**        | styled-components, styled-reset     |
+| **Backend / DB**   | Firebase                            |
+| **Build / Deploy** | Yarn, Vercel                        |
+| **ES 규격**        | ES6+                                |
+| **Code Quality**   | 로컬 환경에서 ESLint, Prettier 세팅 |
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ 개발 환경
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js **20 이상 (권장: 22 LTS)**
+- Yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 실행 방법
 
-### `yarn eject`
+```bash
+# 권장 Node 버전 사용
+nvm install 22 # 최초 1회만 실행
+nvm use 22 # 프로젝트 진입 시 실행
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# 의존성 설치 및 실행
+yarn install
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> 실행 후 http://localhost:3000 접속 (CRA 기준)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📄 라이선스
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+본 프로젝트는 외주 의뢰로 제작된 웹사이트로, **비상업적 참고용 예시**로만 공개됩니다.
+프로젝트의 원본 디자인 및 콘텐츠(앨범 자료 등)는 저작권이 보호됩니다.
